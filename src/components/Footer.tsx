@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <div className="mb-6">
-              <img src="/logo-white.png" alt="شعار" className="h-28 w-auto rounded-lg" />
+              <img src={process.env.PUBLIC_URL + '/logo-white.png'} alt="شعار" className="h-28 w-auto rounded-lg" />
             </div>
             <p className="text-gray-400 leading-relaxed mb-6">
               خدمات علاج طبيعي وتأهيل متخصصة للأطفال والنساء والبالغين. رحلتك إلى صحة أفضل تبدأ من هنا.

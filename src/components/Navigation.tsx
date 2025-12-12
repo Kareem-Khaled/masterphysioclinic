@@ -41,7 +41,7 @@ export default function Navigation() {
             onClick={() => handleNavigate('/')}
             className="flex items-center cursor-pointer group"
           >
-            <img src="/logo.png" alt="شعار" className="h-24 w-auto rounded-lg transform group-hover:scale-105 transition-transform" />
+            <img src={process.env.PUBLIC_URL + '/logo.png'} alt="شعار" className="h-24 w-auto rounded-lg transform group-hover:scale-105 transition-transform" />
           </div>
 
           <div className="hidden md:flex items-center space-x-8">

@@ -42,7 +42,7 @@ export default function Team() {
     },
     {
       name: 'د/ عبدالله الشنقيطي',
-      image: 'https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: `${import.meta.env.BASE_URL}Doctors/3.jpg`,
       specialization: ['طب الأطفال', 'العلاج العصبي', 'العظام'],
       bio: 'متخصص في استخدام الأساليب العلمية الحديثة للحد من التشنج والبروتوكولات الحركية المكثفة وتمارين التحكم العضلي.',
       education: 'بكالوريوس العلاج الطبيعى',

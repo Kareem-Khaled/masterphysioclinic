@@ -124,27 +124,45 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">ماذا يقول مرضانا</h2>
-            <p className="text-xl text-gray-600">قصص حقيقية من أشخاص حقيقيين</p>
+            <p className="text-xl text-gray-600">تقييمات من مرضانا الكرام</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: 'سارة جونسون',
-                role: 'التعافي بعد الولادة',
-                content: 'الرعاية التي تلقيتها كانت استثنائية. ساعدتني الدكتورة أحلام على التعافي بشكل كامل بعد الولادة. أشعر بأنني أقوى من أي وقت مضى!',
+                name: 'نشمية الحربي',
+                timeAgo: 'منذ 6 أيام',
+                content: 'خدمة مميزة واشكر الدكتور راكان على حسن تعامله ولطفه مع الاطفال واشكر ادارة المركز على حسن الاستقبال والتجاوب وسرعة الرد على خدمات المواعيد وغيرها من الخدمات بارك الله لكم',
                 rating: 5,
               },
               {
-                name: 'ميشيل شين',
-                role: 'إصابة رياضية',
-                content: 'بعد إصابتي في الرباط الصليبي، ظننت أن أيامي الرياضية انتهت. بفضل الفريق هنا، عدت للعب كرة القدم بكامل قوتي.',
+                name: 'Jamilah alharby',
+                timeAgo: 'منذ شهر',
+                content: 'كل الشكر والتقدير لدكتورتي الفاضله أحلام كانت عندي اصابه بالركبه وبعد الجلسات معاها تماثلت للشفاء بعد الله سبحانه ثم الدكتوره أحلام ،، وطفلي ياخذ جلسات مع الدكتور عبدالله الله يجزاه خير الجزاء على تعبه واخلاقه العاليه ،، شكراً لكل طاقم العمل.',
                 rating: 5,
               },
               {
-                name: 'إيما ويليامز',
-                role: 'رعاية الأطفال',
-                content: 'عمل الدكتور عبد الرحمن العجائب مع ابني. تحسنت مهاراته الحركية بشكل ملحوظ. نحن ممتنون جدًا!',
+                name: 'Galzaide',
+                timeAgo: 'منذ 3 أشهر',
+                content: 'شكر خاص دكتور عبدالرحمن الجهمي ودكتوره احلام الحربي ما شاء الله لاقوة الا بالله كنت أعالج ولدي عندهم ما كان يجلس وجلس بعد الله ثم تعاون دكتور عبدالرحمن ودكتوره احلام لكن صراحه ماقول غير جزاهم الله خير الجزاء',
+                rating: 5,
+              },
+              {
+                name: 'ماهر',
+                timeAgo: 'منذ 5 أشهر',
+                content: 'أتوجه بجزيل الشكر لمركزكم على الرعاية المتميزة والجهود المبذولة، لقد لمست تحسناً كبيراً بفضل الله ثم بفضل خبرتكم واهتمامكم. شكر خاص للأخصائي عبدالعزيز على تعامله الراقي واحترافيته العالية، فقد كان له دور كبير في رحلة علاجي. كل التقدير والاحترام.',
+                rating: 5,
+              },
+              {
+                name: 'محمد الحربي',
+                timeAgo: 'منذ 3 أشهر',
+                content: 'مركز ممتاز طاقم عمل رائع ذوخبره عاليه اشكر الاخصائي عبدالله على روحه الجميله',
+                rating: 5,
+              },
+              {
+                name: 'عبدالرحمن الحكمي',
+                timeAgo: 'منذ 6 أشهر',
+                content: 'أقدم شكري لجميع الطاقم على حسن الاستقبال والانتظام بالوقت والإهتمام بالمريض ورعايته وتوجيهه وإرشاده بالتمارين المطلوبة مع المساعدة على اختيار افضل السبل لتحقيق افضل النتائج العلاجية وأخص بالذكر الدكتور عبدالرحمن والدكتور عبدالعزيز',
                 rating: 5,
               },
             ].map((testimonial, index) => (
@@ -152,19 +170,21 @@ export default function Home() {
                 key={index}
                 className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
               >
-                <div className="flex space-x-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={20} className="fill-yellow-400 text-yellow-400" />
-                  ))}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex gap-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} size={20} className="fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <span className="text-sm text-gray-500">{testimonial.timeAgo}</span>
                 </div>
-                <p className="text-gray-700 leading-relaxed mb-6 italic">"{testimonial.content}"</p>
-                <div className="flex items-center space-x-4">
+                <p className="text-gray-700 leading-relaxed mb-6 text-right" dir="rtl">"{testimonial.content}"</p>
+                <div className="flex items-center gap-4 justify-end" dir="rtl">
                   <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold">
                     {testimonial.name.charAt(0)}
                   </div>
-                  <div>
+                  <div className="text-right">
                     <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
                   </div>
                 </div>
               </div>

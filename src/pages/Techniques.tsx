@@ -1,6 +1,8 @@
 import { Zap, Hand, Radio, Activity, Waves, Dumbbell, Brain, TrendingUp } from 'lucide-react';
+import { useRouter } from '../context/RouterContext';
 
 export default function Techniques() {
+  const { navigate } = useRouter();
   const mainTechniques = [
     {
       icon: Zap,
@@ -285,7 +287,10 @@ export default function Techniques() {
                 <p className="leading-relaxed mb-8">
                   نراقب تقدمك باستمرار ونعدّل بروتوكول العلاج لضمان أنك دائماً على أسرع طريق للتعافي.
                 </p>
-                <button className="bg-white text-teal-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:scale-105 transition-all self-start">
+                <button
+                  onClick={() => navigate('/contact')}
+                  className="bg-white text-teal-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:scale-105 transition-all self-start"
+                >
                   حدد موعد تقييمك
                 </button>
               </div>

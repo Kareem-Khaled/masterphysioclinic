@@ -95,7 +95,7 @@ export default function About() {
             {[
               {
                 title: 'أخصائيون مرخّصون وذوو خبرة',
-                description: 'فريقنا من المتخصصين المؤهلين تأهيلاً عالياً في طب الأطفال، صحة المرأة، والعلاج العصبي والعضلي الهيكلي.',
+                description: 'فريقنا من المتخصصين المؤهلين تأهيلاً عالياً في تأهيل الأطفال، صحة المرأة، والعلاج العصبي والعضلي الهيكلي.',
               },
               {
                 title: 'تجهيزات حديثة وغرف علاج خاصة',
@@ -124,30 +124,6 @@ export default function About() {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-gray-600">{item.description}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">الاعتمادات والشهادات</h2>
-            <p className="text-xl text-gray-600">تميز معتمد يمكنك الوثوق به</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { icon: Award, title: 'معتمد من ISO', subtitle: 'إدارة الجودة' },
-              { icon: Briefcase, title: 'ممارسون مرخصون', subtitle: 'معتمدون من المجلس' },
-              { icon: Users, title: 'عضو APTA', subtitle: 'جمعية مهنية' },
-              { icon: CheckCircle, title: 'معتمد من التأمين', subtitle: 'مزودون رئيسيون' },
-            ].map((cert, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow">
-                <cert.icon size={48} className="text-teal-600 mx-auto mb-4" />
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{cert.title}</h3>
-                <p className="text-gray-600">{cert.subtitle}</p>
               </div>
             ))}
           </div>

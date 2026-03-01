@@ -16,12 +16,22 @@ export default function Contact() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
+    // Google Apps Script Web App URL
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyLHxcTuV0HdhwU2nQAnfAgz4JAwCAaRI2x9hWhzKMe4QLeoo6Z4wH5XQOxx3mAMdFj/exec';
+
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Log form data (in production, you would send this to your backend)
-      console.log('Form submitted:', formData);
+      // Use POST with FormData for better handling of long messages
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('service', formData.service);
+      formDataToSend.append('message', formData.message);
+      formDataToSend.append('timestamp', new Date().toISOString());
+
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: formDataToSend,
+      });
 
       setSubmitStatus('success');
       setFormData({ name: '', phone: '', service: '', message: '' });

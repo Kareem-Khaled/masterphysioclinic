@@ -21,6 +21,7 @@ export default function Navigation() {
     { path: '/services', label: 'خدماتنا' },
     { path: '/team', label: 'فريقنا' },
     { path: '/techniques', label: 'التقنيات' },
+    { path: '/invoice-search', label: 'استعلام الجلسات' },
     { path: '/contact', label: 'اتصل بنا' },
   ];
 

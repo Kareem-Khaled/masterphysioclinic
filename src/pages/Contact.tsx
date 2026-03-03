@@ -17,7 +17,7 @@ export default function Contact() {
     setSubmitStatus('idle');
 
     // Google Apps Script Web App URL
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyLHxcTuV0HdhwU2nQAnfAgz4JAwCAaRI2x9hWhzKMe4QLeoo6Z4wH5XQOxx3mAMdFj/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxJJSVB_yXfJ6wn0b2FsApYfuFOAqEtU3WORY_YacWnlTrr23BF9C5pLIi0rybam5UF/exec';
 
     try {
       // Use POST with FormData for better handling of long messages

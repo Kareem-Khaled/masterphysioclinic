@@ -7,6 +7,7 @@ import Services from './pages/Services';
 import Team from './pages/Team';
 import Techniques from './pages/Techniques';
 import Contact from './pages/Contact';
+import InvoiceSearch from './pages/InvoiceSearch';
 
 function AppContent() {
   const { currentPath } = useRouter();
@@ -26,6 +27,9 @@ function AppContent() {
         return <Techniques />;
       case '/contact':
         return <Contact />;
+      case '/invoice-search':
+      case '/invoices':
+        return <InvoiceSearch />;
       default:
         return <Home />;
     }

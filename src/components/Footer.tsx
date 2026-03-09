@@ -14,13 +14,13 @@ export default function Footer() {
               خدمات علاج طبيعي وتأهيل متخصصة للأطفال والنساء والبالغين. رحلتك إلى صحة أفضل تبدأ من هنا.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors">
+              <a href="https://www.facebook.com/share/184GXLAQ8i/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors">
+              <a href="https://www.instagram.com/masterphysio_sa?igsh=MTduOGR0enVmd2kybA==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors">
+              <a href="https://x.com/masterphysio_sa" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors">
                 <Twitter size={20} />
               </a>
             </div>
